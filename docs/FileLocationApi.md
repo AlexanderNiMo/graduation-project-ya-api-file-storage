@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**get_streaming_url_api_v1_streaming_url_get**](FileLocationApi.md#get_streaming_url_api_v1_streaming_url_get) | **GET** /api/v1/streaming_url | Добавление информации о местонахождении файла
 
 # **get_streaming_url_api_v1_streaming_url_get**
-> Object get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn)
+> URLInfo get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn)
 
 Добавление информации о местонахождении файла
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Object**](Object.md)
+[**URLInfo**](URLInfo.md)
 
 ### Authorization
 

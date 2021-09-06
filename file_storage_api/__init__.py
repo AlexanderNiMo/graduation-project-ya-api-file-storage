@@ -26,4 +26,6 @@ from file_storage_api.configuration import Configuration
 from file_storage_api.models.cdn import CDN
 from file_storage_api.models.file_location import FileLocation
 from file_storage_api.models.http_validation_error import HTTPValidationError
+from file_storage_api.models.task_result import TaskResult
+from file_storage_api.models.url_info import URLInfo
 from file_storage_api.models.validation_error import ValidationError

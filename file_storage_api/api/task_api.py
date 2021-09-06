@@ -43,7 +43,7 @@ class TaskApi(object):
 
         :param async_req bool
         :param str file_id: (required)
-        :return: Object
+        :return: TaskResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -65,7 +65,7 @@ class TaskApi(object):
 
         :param async_req bool
         :param str file_id: (required)
-        :return: Object
+        :return: TaskResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -119,7 +119,7 @@ class TaskApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Object',  # noqa: E501
+            response_type='TaskResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -139,7 +139,7 @@ class TaskApi(object):
         :param async_req bool
         :param FileLocation body: (required)
         :param CDN cdn: (required)
-        :return: Object
+        :return: TaskResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -162,7 +162,7 @@ class TaskApi(object):
         :param async_req bool
         :param FileLocation body: (required)
         :param CDN cdn: (required)
-        :return: Object
+        :return: TaskResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -226,7 +226,7 @@ class TaskApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Object',  # noqa: E501
+            response_type='TaskResult',  # noqa: E501
             auth_settings=auth_settings,
             async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),

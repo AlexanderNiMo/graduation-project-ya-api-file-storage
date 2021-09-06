@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**upload_task_api_v1_upload_file_post**](UrlApi.md#upload_task_api_v1_upload_file_post) | **POST** /api/v1/upload_file | Добавление информации о местонахождении файла
 
 # **download_task_api_v1_download_file_post**
-> Object download_task_api_v1_download_file_post(file_id)
+> TaskResult download_task_api_v1_download_file_post(file_id)
 
 Добавление информации о местонахождении файла
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Object**](Object.md)
+[**TaskResult**](TaskResult.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_streaming_url_api_v1_streaming_url_get**
-> Object get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn)
+> URLInfo get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn)
 
 Добавление информации о местонахождении файла
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Object**](Object.md)
+[**URLInfo**](URLInfo.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **upload_task_api_v1_upload_file_post**
-> Object upload_task_api_v1_upload_file_post(body, cdn)
+> TaskResult upload_task_api_v1_upload_file_post(body, cdn)
 
 Добавление информации о местонахождении файла
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Object**](Object.md)
+[**TaskResult**](TaskResult.md)
 
 ### Authorization
 
