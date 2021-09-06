@@ -127,17 +127,18 @@ class UrlApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_streaming_url_api_v1_streaming_url_get(self, body, cdn, **kwargs):  # noqa: E501
+    def get_streaming_url_api_v1_streaming_url_get(self, region, file_id, cdn, **kwargs):  # noqa: E501
         """Добавление информации о местонахождении файла  # noqa: E501
 
         Добавление информации о местонахождении файла  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_streaming_url_api_v1_streaming_url_get(body, cdn, async_req=True)
+        >>> thread = api.get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param FileLocation body: (required)
+        :param str region: (required)
+        :param str file_id: (required)
         :param CDN cdn: (required)
         :return: Object
                  If the method is called asynchronously,
@@ -145,29 +146,30 @@ class UrlApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_streaming_url_api_v1_streaming_url_get_with_http_info(body, cdn, **kwargs)  # noqa: E501
+            return self.get_streaming_url_api_v1_streaming_url_get_with_http_info(region, file_id, cdn, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_streaming_url_api_v1_streaming_url_get_with_http_info(body, cdn, **kwargs)  # noqa: E501
+            (data) = self.get_streaming_url_api_v1_streaming_url_get_with_http_info(region, file_id, cdn, **kwargs)  # noqa: E501
             return data
 
-    def get_streaming_url_api_v1_streaming_url_get_with_http_info(self, body, cdn, **kwargs):  # noqa: E501
+    def get_streaming_url_api_v1_streaming_url_get_with_http_info(self, region, file_id, cdn, **kwargs):  # noqa: E501
         """Добавление информации о местонахождении файла  # noqa: E501
 
         Добавление информации о местонахождении файла  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_streaming_url_api_v1_streaming_url_get_with_http_info(body, cdn, async_req=True)
+        >>> thread = api.get_streaming_url_api_v1_streaming_url_get_with_http_info(region, file_id, cdn, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param FileLocation body: (required)
+        :param str region: (required)
+        :param str file_id: (required)
         :param CDN cdn: (required)
         :return: Object
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['body', 'cdn']  # noqa: E501
+        all_params = ['region', 'file_id', 'cdn']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -182,10 +184,14 @@ class UrlApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'body' is set
-        if ('body' not in params or
-                params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `get_streaming_url_api_v1_streaming_url_get`")  # noqa: E501
+        # verify the required parameter 'region' is set
+        if ('region' not in params or
+                params['region'] is None):
+            raise ValueError("Missing the required parameter `region` when calling `get_streaming_url_api_v1_streaming_url_get`")  # noqa: E501
+        # verify the required parameter 'file_id' is set
+        if ('file_id' not in params or
+                params['file_id'] is None):
+            raise ValueError("Missing the required parameter `file_id` when calling `get_streaming_url_api_v1_streaming_url_get`")  # noqa: E501
         # verify the required parameter 'cdn' is set
         if ('cdn' not in params or
                 params['cdn'] is None):
@@ -196,6 +202,10 @@ class UrlApi(object):
         path_params = {}
 
         query_params = []
+        if 'region' in params:
+            query_params.append(('region', params['region']))  # noqa: E501
+        if 'file_id' in params:
+            query_params.append(('file_id', params['file_id']))  # noqa: E501
         if 'cdn' in params:
             query_params.append(('cdn', params['cdn']))  # noqa: E501
 
@@ -205,14 +215,8 @@ class UrlApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'body' in params:
-            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting

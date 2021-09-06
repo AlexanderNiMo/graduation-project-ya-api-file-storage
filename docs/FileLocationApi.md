@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**get_streaming_url_api_v1_streaming_url_get**](FileLocationApi.md#get_streaming_url_api_v1_streaming_url_get) | **GET** /api/v1/streaming_url | Добавление информации о местонахождении файла
 
 # **get_streaming_url_api_v1_streaming_url_get**
-> Object get_streaming_url_api_v1_streaming_url_get(body, cdn)
+> Object get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn)
 
 Добавление информации о местонахождении файла
 
@@ -23,12 +23,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = file_storage_api.FileLocationApi()
-body = file_storage_api.FileLocation() # FileLocation | 
+region = 'region_example' # str | 
+file_id = '38400000-8cf0-11bd-b23e-10b96e4ef00d' # str | 
 cdn = file_storage_api.CDN() # CDN | 
 
 try:
     # Добавление информации о местонахождении файла
-    api_response = api_instance.get_streaming_url_api_v1_streaming_url_get(body, cdn)
+    api_response = api_instance.get_streaming_url_api_v1_streaming_url_get(region, file_id, cdn)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling FileLocationApi->get_streaming_url_api_v1_streaming_url_get: %s\n" % e)
@@ -38,7 +39,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**FileLocation**](FileLocation.md)|  | 
+ **region** | **str**|  | 
+ **file_id** | [**str**](.md)|  | 
  **cdn** | [**CDN**](.md)|  | 
 
 ### Return type
@@ -51,7 +53,7 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
